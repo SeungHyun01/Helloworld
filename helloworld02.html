@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World Animation</title>
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: #ffffff; /* 초기 배경색은 흰색 */
+            color: #ffffff; /* 초기 알파벳 색상은 흰색 */
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: changeBackgroundColor 10s infinite, changeFontColor 8s infinite; /* 배경색과 알파벳 색상을 각각 다르게 변경하는 애니메이션 적용 */
+        }
+        h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 10s forwards; /* fadeIn 애니메이션 적용 (10초 동안) */
+            opacity: 0; /* 초기에는 투명도를 0으로 설정 */
+        }
+        em {
+            font-style: italic; /* 이탤릭체로 설정 */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; } /* 애니메이션 시작 시 투명도를 0으로 설정 */
+            to { opacity: 1; } /* 애니메이션 종료 시 투명도를 1로 설정 */
+        }
+        @keyframes changeBackgroundColor {
+            0% { background-color: #ffffff; } /* 0% 위치에서 흰색 */
+            25% { background-color: #ff0000; } /* 25% 위치에서 빨간색 */
+            50% { background-color: #00ff00; } /* 50% 위치에서 녹색 */
+            75% { background-color: #0000ff; } /* 75% 위치에서 파란색 */
+            100% { background-color: #ffff00; } /* 100% 위치에서 노란색 */
+        }
+        @keyframes changeFontColor {
+            0% { color: #ff0000; } /* 0% 위치에서 빨간색 */
+            25% { color: #00ff00; } /* 25% 위치에서 녹색 */
+            50% { color: #0000ff; } /* 50% 위치에서 파란색 */
+            75% { color: #ffff00; } /* 75% 위치에서 노란색 */
+            100% { color: #ff00ff; } /* 100% 위치에서 자홍색 */
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello <em>World</em></h1>
+</body>
+</html>
